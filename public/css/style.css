@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #000;
+    border: 6px solid transparent;
+    background-clip: content-box;
+    border-radius: 20px;
+    position: absolute;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    background: #1D2939;
+    height: 100vh;
+}
+
+body {
+    color: #dfdfdf;
+}
+
+.app {
+    width: 100%;
+    max-width: 550px;
+    box-sizing: border-box;
+    background: #101828;
+    margin: 75px auto 0;
+    height: 675px;
+    border: 2px solid black;
+    border-radius: 7px;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.add:hover {
+    background: #0e0e0e;
+}
+
+/*Header*/
+header {
+    height: 190px;
+    background-image: url(../img/Glorious-blue-mountain-range.jpg);
+    background-size: cover;
+    background-position: 0 72%;
+    border-bottom: 2px solid black;
+    position: relative;
+}
+.today-data {
+    bottom: 15px;
+    position: absolute;
+    color: #bbbbbb;
+    font-size: 15px;
+    left: 20px;
+}
+.add-item {
+    display: flex;
+    padding: 10px;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+.todo-list {
+    flex: 1;
+    overflow: auto;
+}
+.todo-list li {
+    width: 100%;
+    padding: 12px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    box-sizing: border-box;
+    word-break: break-word;
+}
+.todo-list li:nth-child(even) {
+    background: #00000021;
+}
+.todo-list li p {
+    flex-grow: 1;
+    width: 0;
+    height: 100%;
+    margin: 0 10px;
+}
+.todo-list li p input{
+    padding: 0 10px;
+    height: 26px;
+    width: 100%;
+    line-height: 26px;
+    font-size: 14px;
+    box-sizing: border-box;
+    border: 0;
+    color: #dfdfdf;
+    background: transparent;
+    outline: none;
+}
+.delete, .edit {
+    font-size: 20px;
+    background: transparent;
+    border: 0;
+    color: #dfdfdf;
+    cursor: pointer;
+    line-height: 26px;
+    margin: 0 6px;
+}
+.todo-list li button:first-child {
+    height: 26px;
+    border-radius: 100%;
+    width: 26px;
+    background: #101828;
+    cursor: pointer;
+    margin: auto;
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    font-size: 13px;
+}
+.inputText {
+    height: 40px;
+    width: 100%;
+    display: block;
+    border: 0;
+    box-sizing: border-box;
+    background: #000000;
+    color: #dddddd;
+    border-radius: 3px;
+    max-width: 550px;
+    padding: 0 15px;
+    font-size: 13px;
+}
+.inputText:focus-visible {
+    border: 1px solid #1e3154;
+    outline: none;
+}
+.add {
+    display: block;
+    margin-left: 20px;
+    background: #000;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: white;
+    height: 40px;
+    width: 74px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 0;
+}
+footer {
+    border-top: 2px solid black;
+    height: 50px;
+    padding: 10px;
+    color: #e3e3e3;
+    display: flex;
+    justify-content: space-between;
+    line-height: 28px;
+    font-size: 14px;
+}
+.items-left {
+    width: fit-content;
+}
+.clear {
+    background: #101828;
+    border: 0;
+    width: fit-content;
+}
+.clear,.filters li {
+    cursor: pointer;
+    color: #c9c9c9;
+    transition: 0.2s;
+}
+.clear:hover, .filters li:hover,.clear.on,.filters li.on {
+    color:#fff;
+}
+section {
+    height: calc(100% - 190px);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.filters {
+    width: 40%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.location {
+    position: absolute;
+    top: 42px;
+    color: #ffffff;
+    text-shadow: 0 0 3px black;
+    font-size: 48px;
+    background: transparent;
+    border: 0;
+    width: 100%;
+    text-align: center;
+}
+.temp_c {
+    color: #ffffff;
+    text-shadow: 0 0 3px black;
+    font-size: 29px;
+    line-height: 50px;
+}
+.weather {
+    position: absolute;
+    top: 97px;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+.c-sign {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 38px;
+}
+.weather img {
+    width: 50px;
+}
+.todo-list li button.on {
+    background: #1e3154;
+}
+.clock {
+    bottom: 15px;
+    position: absolute;
+    color: #bbbbbb;
+    font-size: 15px;
+    right: 20px;
+}
+
+.report-task {
+    width: 250px;
+    background: #000000;
+    position: fixed;
+    bottom: -35px;
+    z-index: 300;
+    left: calc(50% - 125px);
+    border-radius: 6px;
+    line-height: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: .3s;
+    opacity: 0;
+}
+.report-task.active {
+    bottom: 20px;
+    opacity: 1;
+}
+
+
+@media (max-width: 550px) {
+    .app {
+        border-radius: 0;
+        margin: 0;
+        height: 100vh;
+    }
+    .clear {
+        width: 30%;
+    }
+    header {
+        height: 160px;
+    }
+    .location{
+        font-size: 45px;
+        top: 30px;
+    }
+    section {
+        height: calc(100% - 160px);
+    }
+    .weather {
+        top: 75px;
+    }
+}

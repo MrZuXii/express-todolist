@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/42abeb4874.js" crossorigin="anonymous"></script>
+    <meta name="author" content="Kamil Bieniek">
+    <meta name="description" content="ToDoList for MegaK contest">
+</head>
+
+<body>
+    <main class="app">
+        <header>
+            <div class="clock"></div>
+<!--            <div class="headerTxt">ToDoList</div>-->
+            <input class="location" type="text">
+            <div class="weather">
+                <img src="" alt="" srcset="">
+                <div class="temp_c"></div>
+                <div class="c-sign">°C</div>
+            </div>
+            <div class="today-data">Sep 5, 2023</div>
+        </header>
+        <section>
+            <div class="add-item">
+                <input class="inputText" type="text" placeholder="Create a new todo...">
+                <button class="add">Add</button>
+            </div>
+            <ul class="todo-list">
+                <li><button class=""></button><p><input disabled="" type="text" style="text-decoration: none;"></p><button class="edit"><i class="fa-regular fa-pen-to-square"></i></button><button class="delete"><i class="fa-regular fa-trash-can"></i></button></li>
+                <li><button class=""></button><p><input disabled="" type="text" style="text-decoration: none;"></p><button class="edit"><i class="fa-regular fa-pen-to-square"></i></button><button class="delete"><i class="fa-regular fa-trash-can"></i></button></li>
+                <li><button class=""></button><p><input disabled="" type="text" style="text-decoration: none;"></p><button class="edit"><i class="fa-regular fa-pen-to-square"></i></button><button class="delete"><i class="fa-regular fa-trash-can"></i></button></li>
+                <li><button class=""></button><p><input disabled="" type="text" style="text-decoration: none;"></p><button class="edit"><i class="fa-regular fa-pen-to-square"></i></button><button class="delete"><i class="fa-regular fa-trash-can"></i></button></li>
+            </ul>
+            <footer>
+                <div class="items-left"><span>17</span> items left</div>
+                <ul class="filters">
+                    <li class="all on">All</li>
+                    <li class="active">Active</li>
+                    <li class="completed">Completed</li>
+                </ul>
+                <button class="clear"><span>Clear completed</span></button>
+            </footer>
+        </section>
+    </main>
+    <div class="tootip"></div>
+    <div class="report-task">Add new Task</div>
+    <script src="js/script.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/time.js"></script>
+</body>
+</html>
